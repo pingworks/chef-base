@@ -16,19 +16,19 @@ Ubuntu 14.04
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['base']['cname']</tt></td>
+    <td><tt>['ws-base']['cname']</tt></td>
     <td>String</td>
     <td>cname for the host</td>
     <td><tt>test</tt></td>
   </tr>
   <tr>
-    <td><tt>['base']['domain']</tt></td>
+    <td><tt>['ws-base']['domain']</tt></td>
     <td>String</td>
     <td>domain name for the hosts file and search domain</td>
     <td><tt>ws.pingworks.net</tt></td>
   </tr>
   <tr>
-    <td><tt>['base']['dns']</tt></td>
+    <td><tt>['ws-base']['dns']</tt></td>
     <td>String</td>
     <td>primary dns ip</td>
     <td><tt>10.33.0.10</tt></td>
