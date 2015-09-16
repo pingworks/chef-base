@@ -1,4 +1,4 @@
-# base-cookbook
+# ws-base-cookbook
 
 base cookbook to setup hosts file and name resolution
 
@@ -39,12 +39,12 @@ Ubuntu 14.04
 
 ### base::default
 
-Include `base` in your node's `run_list`:
+Include `ws-base` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[base::default]"
+    "recipe[ws-base::default]"
   ]
 }
 ```
