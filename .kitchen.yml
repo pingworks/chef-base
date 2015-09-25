@@ -16,3 +16,7 @@ suites:
     run_list: 
       - recipe[ws-base::default]
     attributes:
+      ws-base:
+        cname: 'test'
+        domain: 'pingworks.ws.pingworks.net'
+        dns: '10.33.0.10'
