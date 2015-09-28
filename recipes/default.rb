@@ -28,7 +28,6 @@ bash 'write resolv.conf' do
   cwd '/root'
   code <<-EOF
   echo 'nameserver #{node['ws-base']['dns']}' > /etc/resolv.conf
-  echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
   echo 'search #{searchdomainstring}' >> /etc/resolv.conf
   EOF
   #not_if 'test -s /etc/resolv.conf'
