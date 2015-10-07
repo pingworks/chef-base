@@ -1,4 +1,4 @@
-# ws-base-cookbook
+# pw_base-cookbook
 
 base cookbook to setup hosts file and name resolution
 
@@ -16,19 +16,19 @@ Ubuntu 14.04
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['ws-base']['cname']</tt></td>
+    <td><tt>['pw_base']['cname']</tt></td>
     <td>String</td>
     <td>cname for the host</td>
     <td><tt>test</tt></td>
   </tr>
   <tr>
-    <td><tt>['ws-base']['domain']</tt></td>
+    <td><tt>['pw_base']['domain']</tt></td>
     <td>String</td>
     <td>domain name for the hosts file and search domain</td>
     <td><tt>ws.pingworks.net</tt></td>
   </tr>
   <tr>
-    <td><tt>['ws-base']['dns']</tt></td>
+    <td><tt>['pw_base']['dns']</tt></td>
     <td>String</td>
     <td>primary dns ip</td>
     <td><tt>10.33.0.10</tt></td>
@@ -39,12 +39,12 @@ Ubuntu 14.04
 
 ### base::default
 
-Include `ws-base` in your node's `run_list`:
+Include `pw_base` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[ws-base::default]"
+    "recipe[pw_base::default]"
   ]
 }
 ```

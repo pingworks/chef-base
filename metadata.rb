@@ -1,4 +1,4 @@
-name             'ws-base'
+name             'pw_base'
 maintainer       'Christoph Lukas'
 maintainer_email 'christoph.lukas@gmx.net'
 license          'All rights reserved'
