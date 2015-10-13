@@ -16,8 +16,5 @@ suites:
   - name: default
     run_list:
       - recipe[pw_base::default]
+      - recipe[pw_base::ssh-user]
     attributes:
-      pw_base:
-        cname: 'test'
-        domain: 'pingworks.ws.pingworks.net'
-        dns: '8.8.8.8'

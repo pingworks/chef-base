@@ -50,10 +50,12 @@ cookbook_file "sudoers" do
   mode '644'
 end
 
-bash 'fill sudoers' do
-  user 'root'
-  cwd '/etc/sudoers.d'
-  code <<-EOF
-  echo -e "#{node['pw_base']['ssh-user-sudo']}" >> #{node['pw_base']['ssh-user']}
-  EOF
+if node['pw_base']['ssh-user-sudo'] != '' then
+  bash 'fill sudoers' do
+    user 'root'
+    cwd '/etc/sudoers.d'
+    code <<-EOF
+    echo -e "#{node['pw_base']['ssh-user-sudo']}" >> #{node['pw_base']['ssh-user']}
+    EOF
+  end
 end
