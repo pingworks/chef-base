@@ -17,4 +17,5 @@ suites:
     run_list:
       - recipe[pw_base::default]
       - recipe[pw_base::ssh-user]
+      - recipe[pw_base::gemrc]
     attributes:
