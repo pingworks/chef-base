@@ -7,7 +7,7 @@ searchdomains = [basedomain]
 base = ""
 domainparts.each{ |part|
   searchdomains.push(part + "." + base + basedomain)
-  base+=part + "."
+  base = part + "." + base
 }
 searchdomainstring = searchdomains.reverse.join(' ')
 

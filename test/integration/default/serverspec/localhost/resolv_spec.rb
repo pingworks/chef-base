@@ -7,6 +7,6 @@ end
 
 describe file('/etc/resolv.conf') do
   it { should exist }
-  its(:content) { should match /search pingworks.ws.net ws.net/ }
+  its(:content) { should match /search test01.prod.pingworks.ws.net prod.pingworks.ws.net pingworks.ws.net ws.net/ }
   its(:content) { should match /nameserver 8.8.8.8/ }
 end

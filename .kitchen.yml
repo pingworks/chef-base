@@ -19,3 +19,5 @@ suites:
       - recipe[pw_base::ssh-user]
       - recipe[pw_base::gemrc]
     attributes:
+      pw_base:
+        domain: 'test01.prod.pingworks.ws.net'
