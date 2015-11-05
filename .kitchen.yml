@@ -21,3 +21,4 @@ suites:
     attributes:
       pw_base:
         domain: 'test01.prod.pingworks.ws.net'
+        dns: '10.33.0.10'
