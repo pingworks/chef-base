@@ -2,14 +2,20 @@
 # the actual domain and the basedomain
 domain = node['pw_base']['domain']
 basedomain = node['pw_base']['basedomain']
-domainparts = domain[0, domain.length - basedomain.length - 1].split('.').reverse
-searchdomains = [basedomain]
-base = ''
-domainparts.each do |part|
-  searchdomains.push(part + '.' + base + basedomain)
-  base = part + '.' + base
+if domain == basedomain
+  searchdomainstring = domain
+elsif domain[-basedomain.length, basedomain.length] == basedomain
+  domainparts = domain[0, domain.length - basedomain.length - 1].split('.').reverse
+  searchdomains = [basedomain]
+  base = ''
+  domainparts.each do |part|
+    searchdomains.push(part + '.' + base + basedomain)
+    base = part + '.' + base
+  end
+  searchdomainstring = searchdomains.reverse.join(' ')
+else
+  searchdomainstring = domain + ' ' + basedomain
 end
-searchdomainstring = searchdomains.reverse.join(' ')
 
 bash 'write resolv.conf' do
   user 'root'
