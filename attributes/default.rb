@@ -1,3 +1,4 @@
+default['pw_base']['skip-hosts'] = false
 default['pw_base']['basedomain'] = 'ws.net'
 default['pw_base']['domain'] = 'pingworks.ws.net'
 default['pw_base']['cname'] = 'test'

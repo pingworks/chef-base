@@ -6,5 +6,5 @@ bash 'write hostsfile' do
   echo "127.0.0.1 localhost" > /etc/hosts
   echo "#{node['ipaddress']} #{node['pw_base']['cname']}.#{node['pw_base']['domain']} #{node['pw_base']['cname']} #{node['hostname']}" >> /etc/hosts
   EOF
-  # not_if 'test -s /etc/hosts'
+  not_if "#{node['pw_base']['skip-hosts']}"
 end
